@@ -40,3 +40,10 @@ echo "Docker Compose Installed"
 docker-compose --version
 sleep 2
 
+echo "Adicionando grupo docker.."
+sudo groupadd docker
+
+sudo usermod -aG docker $USER
+
+newgrp docker
+
